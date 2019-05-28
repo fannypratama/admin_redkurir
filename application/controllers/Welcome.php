@@ -99,9 +99,9 @@ public function ongkir(){
 	}
 	public function tambah_ongkir(){
 		if($this->input->post('submit')){
-			if($this->M_artikel->validation("save")){
-				$this->M_artikel->save();
-				redirect('admin/ongkir');
+			if($this->M_ongkir->validation("save")){
+				$this->M_ongkir->save();
+				redirect('welcome/ongkir');
 			}
 		}
 
@@ -112,9 +112,9 @@ public function ongkir(){
 	}
 	public function edit_ongkir($id){
 		if($this->input->post('submit')){
-			if($this->M_artikel->validation("update")){
-				$this->M_artikel->edit($id);
-				redirect('admin/ongkir');
+			if($this->M_ongkir->validation("update")){
+				$this->M_ongkir->edit($id);
+				redirect('welcome/ongkir');
 			}
 		}
 

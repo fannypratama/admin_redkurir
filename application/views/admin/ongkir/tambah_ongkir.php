@@ -86,9 +86,7 @@
                                     </div>
                                 </div>
                                 <div class="sparkline13-graph">
-                                    <a class="btn btn-success" data-toggle="modal" href="<?= base_url('welcome/form_ongkir')?>">
-                                            <b>Tambah Tarif Pengiriman</b>
-                                        </a>
+                                    <a class="btn btn-success" data-toggle="modal" data-target="#tambah">TAMBAH DATA</a>
                                     <div class="datatable-dashv1-list custom-datatable-overright">
                                         <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
@@ -117,10 +115,10 @@
                                                     <td><?php echo $data->kode_pos?></td>
                                                     <td><?php echo $data->Tarif?></td>
                                                     <td>
-                                                       <a href="<?php echo base_url('admin/edit_ongkir/'.$data->id_ongkir)?>">
+                                                       <a href="<?php echo base_url('welcome/edit_ongkir/'.$data->id_ongkir)?>">
                                                     <u>Edit</u>
                                                 </a>
-                                               <a href="<?php echo base_url('welcome/hapus_ongkir/'.$data->id_ongkir)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
+                                               <a href="<?php echo base_url('welcome/hapus_ongkir/'.$data->id_ongkir)?>" onclick="javascript: return confirm('Hapus data?')">Hapus</a>
                                                     </td>
 
 
@@ -141,4 +139,38 @@
 
         </div>
     </div>
-    
+    <div id="tambah" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Tambah Data Pengiriman</h4>
+            </div>
+            <form action="<?= base_url('welcome/tambah_ongkir')?>" method="post" enctype="multipart/form-data">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label class="control-label" for="g">ID</label>
+                  <input type="text" name="id_ongkir" class="form-control"  >
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="hrg_brg">Kecamatan</label>
+                  <input type="text" name="Kecamatan" class="form-control"  >
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="ktgr_brg">Kode Pos</label>
+                  <input type="number" name="kode_pos" class="form-control"  >
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="stok_brg">Tarif</label>
+                  <input type="number" name="Tarif" class="form-control"  >
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="reset" class="btn btn-danger">Reset</button>
+                <input type="submit" class="btn" name="submit" value="Simpan">
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>

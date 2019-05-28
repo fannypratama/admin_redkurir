@@ -10,7 +10,6 @@
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <a href="#"><img src="img/message/1.jpg" alt="" />
-                    </a>
                     <h3>Admin</h3>
                     <strong></strong>
                 </div>
@@ -72,7 +71,7 @@
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                                <li><a href="#"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
+                                                <li><a href="<?= base_url('Login/logout')?>"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
                                                 </li>
                                             </ul>
                                         </li>

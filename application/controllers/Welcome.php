@@ -23,6 +23,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_katalog');
+		$this->load->model('M_ongkir');
 		function convRupiah($angka){
 			$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
 			return $hasil_rupiah;
@@ -83,4 +84,59 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+public function ongkir(){
+		$data['ongkir'] = $this->M_ongkir->view();
+		$this->load->view('templates/header');
+			$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/tambah_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+	public function form_ongkir(){
+		$this->load->view('templates/header');
+			$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/form_ongkir');
+		$this->load->view('templates/footer');
+	}
+	public function tambah_ongkir(){
+		if($this->input->post('submit')){
+			if($this->M_artikel->validation("save")){
+				$this->M_artikel->save();
+				redirect('admin/ongkir');
+			}
+		}
+
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/ongkir');
+		$this->load->view('templates/footer');
+	}
+	public function edit_ongkir($id){
+		if($this->input->post('submit')){
+			if($this->M_artikel->validation("update")){
+				$this->M_artikel->edit($id);
+				redirect('admin/ongkir');
+			}
+		}
+
+		$data['ongkir'] = $this->M_ongkir->view_by($id);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/edit_ongkir', $data);
+		$this->load->view('templates/footer');		
+	}
+
+	public function lihat_ongkir($id){
+		$data['ongkir'] = $this->M_artikel->view_by($id);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/cek_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function hapus_ongkir($id){
+		$this->M_ongkir->delete($id);
+		redirect('welcome/ongkir');
+	}
+
 }
+	

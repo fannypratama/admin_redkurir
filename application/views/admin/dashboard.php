@@ -17,7 +17,7 @@
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                         <li class="nav-item">
-                            <a href="<?= base_url('welcome/dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
+                            <a href="<?= base_url('dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
                             </li>
                         <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
                         </li>
@@ -25,7 +25,7 @@
                         </li>
                         <li class="nav-item"><a href="#"><i class="menu-icon fa fa-shopping-cart"></i> <span class="mini-dn">Order</span></a>
                         </li>
-                        <li class="nav-item"><a href="#"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
+                        <li class="nav-item"><a href="<?= base_url('welcome/ongkir')?>"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
                         </li>
                     </ul>
                 </div>
@@ -118,6 +118,4 @@
             <!-- stockprice, feed area start-->
             <!-- stockprice, feed area end-->
             <!-- Data table area Start-->
-                        <!-- Data table area End-->
-        </div>
-    </div>
+                        <!-- Data table area End--

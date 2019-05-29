@@ -339,13 +339,13 @@
                                             		<td><?= $data->email?></td>
                                             		<td><?= $data->password?></td>
                                             		<td><?= $data->nama_pelanngan?></td>
-                                            		<td><?= $data->Wa/telp?></td>
+                                            		<td><?= $data->Wa?></td>
                                                     <td><?= $data->Alamat?></td>
                                                     <td><?= $data->kecamatan?></td>
                                                     <td><?= $data->kode_pos?></td>
                                             		<td>
-                                            			<a href="" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
-                                            			<a class="btn btn-success" data-toggle="modal" data-target="#edit" href="">Edit</a>
+                                            			<a href="<?= base_url('welcome/hapus_pelanggan/'.$data->kode_pos)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
+                                            			<a class="btn btn-success" href="<?php echo base_url('welcome/edit_pelanggan/'.$data->kode_pos)?>">Edit</a>
                                             		</td>
 
 
@@ -409,7 +409,7 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Edit Data Pelanggan</h4>
             </div>
-            <form action="<?= base_url('welcome/edit_katalog'.$katalog->id_barang)?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url('welcome/pelanggan/'.$pelanggan->kode_pos)?>" method="post" enctype="multipart/form-data">
               <div class="modal-body">
                 <div class="form-group">
                   <label class="control-label" for="no">No</label>

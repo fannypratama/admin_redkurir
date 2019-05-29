@@ -143,5 +143,35 @@ public function ongkir(){
 		redirect('welcome/ongkir');
 	}
 
+	public function edit($id)
+	{
+		$where = array('id_ongkir' => $id);
+		$data['ongkir'] = $this->M_ongkir->edit_data($where, 'ongkir')->result();
+
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/edit_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function update(){
+		$id= $this->input->post('id_ongkir');
+		$Kecamatan= $this->input->post('Kecamatan');
+		$kode_pos= $this->input->post('kode_pos');
+		$Tarif= $this->input->post('Tarif');
+
+		$data = array(
+			'Kecamatan' => $Kecamatan,
+			'kode_pos'=> $kode_pos,
+			'Tarif'=> $Tarif );
+
+		$where = array(
+		'id_ongkir' => $id
+		);
+
+		$this->M_ongkir->update_data($where,$data,'ongkir');
+		redirect('welcome/ongkir');
+	}
+
 }
 	

@@ -10,13 +10,14 @@
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <a href="#"><img src="img/message/1.jpg" alt="" />
+                    </a>
                     <h3>Admin</h3>
                     <strong></strong>
                 </div>
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                         <li class="nav-item">
-                            <a href="<?= base_url('dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
+                            <a href="<?= base_url('welcome')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
                             </li>
                         <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
                         </li>

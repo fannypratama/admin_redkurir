@@ -127,14 +127,15 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
-                                                    <form action="#">
+                                                    <?php foreach($ongkir as $o) { ?>
+                                                    <form action="<?= base_url('welcome/update'); ?>" method="post">
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
                                                                     <label class="login2 pull-right pull-right-pro">ID</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" />
+                                                                    <input type="text" class="form-control" name="id_ongkir" value="<?php echo $o->id_ongkir ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -144,7 +145,7 @@
                                                                     <label class="login2 pull-right pull-right-pro">Kecamatan</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" />
+                                                                    <input type="text" class="form-control" name="Kecamatan" value="<?php echo $o->Kecamatan ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -154,7 +155,7 @@
                                                                     <label class="login2 pull-right pull-right-pro">Kode Pos</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" />
+                                                                    <input type="number" class="form-control" name="kode_pos" value="<?php echo $o->kode_pos ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -164,7 +165,7 @@
                                                                     <label class="login2 pull-right pull-right-pro">Tarif</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" />
+                                                                    <input type="number" class="form-control" name="Tarif" value="<?php echo $o->Tarif ?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -183,6 +184,7 @@
                                                             </div>
                                                         </div>
                                                     </form>
+                                                <?php } ?>
                                                 </div>
                                             </div>
                                         </div>

@@ -29,6 +29,7 @@ class Welcome extends CI_Controller {
 		}
 		$this->load->model('M_katalog');
 		$this->load->model('M_ongkir');
+		$this->load->model('M_Pelanggan');
 		function convRupiah($angka){
 			$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
 			return $hasil_rupiah;
@@ -171,6 +172,36 @@ public function ongkir(){
 
 		$this->M_ongkir->update_data($where,$data,'ongkir');
 		redirect('welcome/ongkir');
+	}
+public function hapus_pelanggan($id)
+	{
+		$this->M_Pelanggan->delete($id);
+		redirect('welcome/pelanggan');
+	}
+
+	public function edit_pelanggan($id)
+	{
+		if($this->input->post('submit')){
+			if($this->M_Pelanggan->validation("update")){
+				$this->M_Pelanggan->edit($id);
+				redirect('welcome/pelanggan');
+			}
+		}
+
+		$data['pelanggan'] = $this->M_Pelanggan->view_by($id);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/edit_pelanggan', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function pelanggan()
+	{
+		$data['pelanggan'] = $this->M_Pelanggan->view();
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/Pelanggan', $data);
+		$this->load->view('templates/footer');
 	}
 
 }

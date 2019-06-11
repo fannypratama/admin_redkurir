@@ -19,16 +19,16 @@
                 </div>
                 <div class="left-custom-menu-adp-wrap">
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
-                        <li class="nav-item">
-                            <a href="<?= base_url('dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
+                        li class="nav-item">
+                            <a href="<?= base_url('welcome')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
                             </li>
-                        <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
+                        <li class="nav-item"><a href="<?= base_url('welcome/Pelanggan')?>"<i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
                         </li>
                         <li class="nav-item"><a href="<?= base_url('welcome/katalog')?>"<i class="menu-icon fa fa-picture-o"></i> <span class="mini-dn">Katalog</span></a>
                         </li>
                         <li class="nav-item"><a href="#"><i class="menu-icon fa fa-shopping-cart"></i> <span class="mini-dn">Order</span></a>
                         </li>
-                        <li class="nav-item"><a href="#"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
+                        <li class="nav-item"><a href="<?= base_url('welcome/ongkir')?>"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
                         </li>
                     </ul>
                 </div>
@@ -339,14 +339,14 @@
                                             		<td><?= $data->email?></td>
                                             		<td><?= $data->password?></td>
                                             		<td><?= $data->nama_pelanngan?></td>
-                                            		<td><?= $data->Wa/telp?></td>
+                                            		<td><?= $data->telp?></td>
                                                     <td><?= $data->Alamat?></td>
                                                     <td><?= $data->kecamatan?></td>
                                                     <td><?= $data->kode_pos?></td>
                                             		<td>
-                                            			<a href="" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
-                                            			<a class="btn btn-success" data-toggle="modal" data-target="#edit" href="">Edit</a>
-                                            		</td>
+                                            			<a href="<?= base_url('welcome/hapus_pelanggan/'.$data->id_pelanggan)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
+                                               <a href="<?php echo base_url('welcome/hapus_pelanggan/'.$data->id_pelanggan)?>" onclick="javascript: return confirm('Hapus data?')">Hapus</a>
+                                                    </td>
 
 
                                             	</tr>

@@ -1,32 +1,24 @@
+
 <?php if( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * 
  */
 class M_Pelanggan extends CI_Model{
-	public function edit($id){
-		$data = array(
-			'username' => $this->input->post('nm_brg'), 
-			'email' => $this->input->post('hrg_brg'), 
-			'password' => $this->input->post('ktgr_brg'),
-			'nama_pelanngan' => $this->input->post('stok_brg'),
-			'Wa/telp' => $this->input->post('stok_brg'),
-			'Alamat' => $this->input->post('stok_brg'),
-			'kecamatan' => $this->input->post('stok_brg'),
-			'kode_pos' => $this->input->post('stok_brg'),
-		);
 
-		$this->db->where('id_barang', $id);
-		$this->db->update('tb_barang', $data);
+	public function update($data=array(),$id){
+
+		$this->db->where('id_pelanggan', $id);
+		$this->db->update('pelanggan', $data);
 	}
 
 	public function view_by($id){
-		$this->db->where('id_barang', $id);
-		return $this->db->get('tb_barang')->row();
+		$this->db->where('id_pelanggan', $id);
+		return $this->db->get('pelanggan')->row();
 	}
 
 	public function delete($id){
-		$this->db->where('id_barang', $id);
-		$this->db->delete('tb_barang');
+		$this->db->where('id_pelanggan', $id);
+		$this->db->delete('pelanggan');
 	}
 
 	public function view(){
@@ -37,12 +29,15 @@ class M_Pelanggan extends CI_Model{
 	}
 
 public function validation($mode){
-		$this->load->library('form_validation');
-		if($mode == "save")
-			$this->form_validation->set_rules('nm_brg', 'nm_brg', 'required');
-			$this->form_validation->set_rules('hrg_brg', 'hrg_brg', 'required');
-			$this->form_validation->set_rules('ktgr_brg', 'ktgr_brg', 'required');
-			$this->form_validation->set_rules('stok_brg', 'stok_brg', 'required');
+
+			$this->form_validation->set_rules('username', 'username', 'required');
+			$this->form_validation->set_rules('email', 'email', 'required');
+			$this->form_validation->set_rules('password', 'password', 'required');
+			$this->form_validation->set_rules('nama_pelanngan', 'nama_pelanggan', 'required');
+			$this->form_validation->set_rules('wa', 'Wa', 'required');
+			$this->form_validation->set_rules('Alamat', 'alamat', 'required');
+			$this->form_validation->set_rules('kecamatan', 'kecamatan', 'required');
+			$this->form_validation->set_rules('kode_pos', 'kode_pos', 'required');
 			if($this->form_validation->run())
 				return TRUE;
 			else
@@ -56,7 +51,7 @@ public function validation($mode){
 			'stok_barang' => $this->input->post('stok_brg')
 		);
 
-		$this->db->insert('tb_barang', $data);
+		$this->db->insert('pelanggan', $data);
 	}
 }
 ?>

@@ -21,9 +21,18 @@ class Welcome extends CI_Controller {
 
 	function __construct()
 	{
+
 		parent::__construct();
+		
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("Login"));
+		}
 		$this->load->model('M_katalog');
+
 		$this->load->model('M_Pelanggan');
+
+		$this->load->model('M_ongkir');
+
 		function convRupiah($angka){
 			$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
 			return $hasil_rupiah;
@@ -114,6 +123,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+
 	public function hapus_pelanggan($id)
 	{
 		$this->M_Pelanggan->delete($id);
@@ -147,4 +157,90 @@ class Welcome extends CI_Controller {
 
 
 
+public function ongkir(){
+		$data['ongkir'] = $this->M_ongkir->view();
+		$this->load->view('templates/header');
+			$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/tambah_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+	public function form_ongkir(){
+		$this->load->view('templates/header');
+			$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/form_ongkir');
+		$this->load->view('templates/footer');
+	}
+	public function tambah_ongkir(){
+		if($this->input->post('submit')){
+			if($this->M_ongkir->validation("save")){
+				$this->M_ongkir->save();
+				redirect('welcome/ongkir');
+			}
+		}
+
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/ongkir');
+		$this->load->view('templates/footer');
+	}
+	public function edit_ongkir($id){
+		if($this->input->post('submit')){
+			if($this->M_ongkir->validation("update")){
+				$this->M_ongkir->edit($id);
+				redirect('welcome/ongkir');
+			}
+		}
+
+		$data['ongkir'] = $this->M_ongkir->view_by($id);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/edit_ongkir', $data);
+		$this->load->view('templates/footer');		
+	}
+
+	public function lihat_ongkir($id){
+		$data['ongkir'] = $this->M_artikel->view_by($id);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/cek_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function hapus_ongkir($id){
+		$this->M_ongkir->delete($id);
+		redirect('welcome/ongkir');
+	}
+
+	public function edit($id)
+	{
+		$where = array('id_ongkir' => $id);
+		$data['ongkir'] = $this->M_ongkir->edit_data($where, 'ongkir')->result();
+
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('admin/ongkir/edit_ongkir', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function update(){
+		$id= $this->input->post('id_ongkir');
+		$Kecamatan= $this->input->post('Kecamatan');
+		$kode_pos= $this->input->post('kode_pos');
+		$Tarif= $this->input->post('Tarif');
+
+		$data = array(
+			'Kecamatan' => $Kecamatan,
+			'kode_pos'=> $kode_pos,
+			'Tarif'=> $Tarif );
+
+		$where = array(
+		'id_ongkir' => $id
+		);
+
+		$this->M_ongkir->update_data($where,$data,'ongkir');
+		redirect('welcome/ongkir');
+	}
+
+
 }
+	

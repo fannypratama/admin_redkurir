@@ -1,3 +1,4 @@
+
 <?php if( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * 
@@ -11,12 +12,20 @@ class M_Pelanggan extends CI_Model{
 	}
 
 	public function view_by($id){
+
 		$this->db->where('kode_pos', $id);
+
+		$this->db->where('id_pelanggan', $id);
+
 		return $this->db->get('pelanggan')->row();
 	}
 
 	public function delete($id){
+
 		$this->db->where('kode_pos', $id);
+
+		$this->db->where('id_pelanggan', $id);
+
 		$this->db->delete('pelanggan');
 	}
 
@@ -50,7 +59,7 @@ public function validation($mode){
 			'stok_barang' => $this->input->post('stok_brg')
 		);
 
-		$this->db->insert('tb_barang', $data);
+		$this->db->insert('pelanggan', $data);
 	}
 }
 ?>

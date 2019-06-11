@@ -118,7 +118,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
-                                                    <form action="<?= base_url('welcome/edit_katalog/'.$katalog->id_barang)?>" method="post">
+                                                    <form action="<?= base_url('welcome/edit_katalog2/'.$katalog->id_barang)?>" method="post">
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">

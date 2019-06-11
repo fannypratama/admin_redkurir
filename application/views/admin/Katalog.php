@@ -22,7 +22,7 @@
                         <li class="nav-item">
                             <a href="<?= base_url('dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
                             </li>
-                        <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
+                        <li class="nav-item"><a href="<?= base_url('welcome/pelanggan')?>" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
                         </li>
                         <li class="nav-item"><a href="<?= base_url('welcome/katalog')?>"<i class="menu-icon fa fa-picture-o"></i> <span class="mini-dn">Katalog</span></a>
                         </li>
@@ -55,18 +55,10 @@
                                         <li class="nav-item">
                                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                 <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                                <span class="admin-name">Advanda Cro</span>
+                                                <span class="admin-name">Red Kurir</span>
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                                <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
-                                                </li>
-                                                <li><a href="#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
-                                                </li>
-                                                <li><a href="#"><span class="adminpro-icon adminpro-money author-log-ic"></span>User Billing</a>
-                                                </li>
-                                                <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Settings</a>
-                                                </li>
                                                 <li><a href="#"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
                                                 </li>
                                             </ul>
@@ -110,154 +102,7 @@
             </div>
             <!-- Breadcome End-->
             <!-- Mobile Menu start -->
-            <div class="mobile-menu-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="mobile-menu">
-                                <nav id="dropdown">
-                                    <ul class="mobile-menu-nav">
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="dashboard.html">Dashboard v.1</a>
-                                                </li>
-                                                <li><a href="dashboard-2.html">Dashboard v.2</a>
-                                                </li>
-                                                <li><a href="analytics.html">Analytics</a>
-                                                </li>
-                                                <li><a href="widgets.html">Widgets</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="demo" class="collapse dropdown-header-top">
-                                                <li><a href="inbox.html">Inbox</a>
-                                                </li>
-                                                <li><a href="view-mail.html">View Mail</a>
-                                                </li>
-                                                <li><a href="compose-mail.html">Compose Mail</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#others" href="#">Miscellaneous <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="others" class="collapse dropdown-header-top">
-                                                <li><a href="profile.html">Profile</a>
-                                                </li>
-                                                <li><a href="contact-client.html">Contact Client</a>
-                                                </li>
-                                                <li><a href="contact-client-v.1.html">Contact Client v.1</a>
-                                                </li>
-                                                <li><a href="project-list.html">Project List</a>
-                                                </li>
-                                                <li><a href="project-details.html">Project Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">Interface <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-                                                <li><a href="google-map.html">Google Map</a>
-                                                </li>
-                                                <li><a href="data-maps.html">Data Maps</a>
-                                                </li>
-                                                <li><a href="pdf-viewer.html">Pdf Viewer</a>
-                                                </li>
-                                                <li><a href="x-editable.html">X-Editable</a>
-                                                </li>
-                                                <li><a href="code-editor.html">Code Editor</a>
-                                                </li>
-                                                <li><a href="tree-view.html">Tree View</a>
-                                                </li>
-                                                <li><a href="preloader.html">Preloader</a>
-                                                </li>
-                                                <li><a href="images-cropper.html">Images Cropper</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Chartsmob" href="#">Charts <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="Chartsmob" class="collapse dropdown-header-top">
-                                                <li><a href="bar-charts.html">Bar Charts</a>
-                                                </li>
-                                                <li><a href="line-charts.html">Line Charts</a>
-                                                </li>
-                                                <li><a href="area-charts.html">Area Charts</a>
-                                                </li>
-                                                <li><a href="rounded-chart.html">Rounded Charts</a>
-                                                </li>
-                                                <li><a href="c3.html">C3 Charts</a>
-                                                </li>
-                                                <li><a href="sparkline.html">Sparkline Charts</a>
-                                                </li>
-                                                <li><a href="peity.html">Peity Charts</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Tables <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                                <li><a href="static-table.html">Static Table</a>
-                                                </li>
-                                                <li><a href="data-table.html">Data Table</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#formsmob" href="#">Forms <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="formsmob" class="collapse dropdown-header-top">
-                                                <li><a href="basic-form-element.html">Basic Form Elements</a>
-                                                </li>
-                                                <li><a href="advance-form-element.html">Advanced Form Elements</a>
-                                                </li>
-                                                <li><a href="password-meter.html">Password Meter</a>
-                                                </li>
-                                                <li><a href="multi-upload.html">Multi Upload</a>
-                                                </li>
-                                                <li><a href="tinymc.html">Text Editor</a>
-                                                </li>
-                                                <li><a href="dual-list-box.html">Dual List Box</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">App views <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="Appviewsmob" class="collapse dropdown-header-top">
-                                                <li><a href="basic-form-element.html">Basic Form Elements</a>
-                                                </li>
-                                                <li><a href="advance-form-element.html">Advanced Form Elements</a>
-                                                </li>
-                                                <li><a href="password-meter.html">Password Meter</a>
-                                                </li>
-                                                <li><a href="multi-upload.html">Multi Upload</a>
-                                                </li>
-                                                <li><a href="tinymc.html">Text Editor</a>
-                                                </li>
-                                                <li><a href="dual-list-box.html">Dual List Box</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                            <ul id="Pagemob" class="collapse dropdown-header-top">
-                                                <li><a href="login.html">Login</a>
-                                                </li>
-                                                <li><a href="register.html">Register</a>
-                                                </li>
-                                                <li><a href="captcha.html">Captcha</a>
-                                                </li>
-                                                <li><a href="checkout.html">Checkout</a>
-                                                </li>
-                                                <li><a href="contact.html">Contacts</a>
-                                                </li>
-                                                <li><a href="review.html">Review</a>
-                                                </li>
-                                                <li><a href="order.html">Order</a>
-                                                </li>
-                                                <li><a href="comment.html">Comment</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <!-- Mobile Menu end -->
             <!-- Breadcome start-->
             <div class="breadcome-area des-none">
@@ -336,10 +181,11 @@
                                             		<td><?= $data->harga_barang?></td>
                                             		<td><?= $data->Kategori?></td>
                                             		<td><?= $data->stok_barang?></td>
-                                            		<td><?= $data->gambar_barang?></td>
+                                                    <td><?= $data->gambar_barang?></td>
+                                            		<td><img src = "<?php echo base_url();?>/gambarkatalog/<?= $data->gambar_barang;?>" width="100" ></td>
                                             		<td>
                                             			<a href="<?php echo base_url('welcome/hapus_katalog/'.$data->id_barang)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
-                                            			<a class="btn btn-success" data-toggle="modal" data-target="#edit" href="<?php echo base_url('welcome/edit_katalog/'.$data->id_barang)?>">Edit</a>
+                                            			<a class="btn btn-success" href="<?php echo base_url('welcome/edit_katalog/'.$data->id_barang)?>">Edit</a>
                                             		</td>
 
 
@@ -385,41 +231,9 @@
                   <label class="control-label" for="stok_brg">Stok Barang</label>
                   <input type="number" name="stok_brg" class="form-control" id="stok_brg" >
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="reset" class="btn btn-danger">Reset</button>
-                <input type="submit" class="btn" name="submit" value="Simpan">
-              </div>
-            </form>
-            
-          </div>
-        </div>
-      </div>
-
-      <div id="edit" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Edit Data Barang</h4>
-            </div>
-            <form action="<?= base_url('welcome/edit_katalog'.$katalog->id_barang)?>" method="post" enctype="multipart/form-data">
-              <div class="modal-body">
                 <div class="form-group">
-                  <label class="control-label" for="nm_brg">Nama Barang</label>
-                  <input type="text" name="nm_brg" class="form-control" id="nm_brg" value="<?php echo set_value('nm_brg', $katalog->nama_barang)?>" >
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="hrg_brg">Harga Barang</label>
-                  <input type="number" name="hrg_brg" class="form-control" id="hrg_brg" value="<?php echo set_value('hrg_brg', $katalog->harga_barang)?>">
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="ktgr_brg">Kategori Barang</label>
-                  <input type="text" name="ktgr_brg" class="form-control" id="ktgr_brg" value="<?php echo set_value('ktgr_brg', $katalog->Kategori)?>">
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="stok_brg">Stok Barang</label>
-                  <input type="number" name="stok_brg" class="form-control" id="stok_brg" value="<?php echo set_value('stok_brg', $katalog->stok_barang)?>">
+                  <label class="control-label" for="gmb_brg">Gambar Barang</label>
+                  <input type="text" name="gmb_brg" class="form-control" id="gmb_brg" >
                 </div>
               </div>
               <div class="modal-footer">

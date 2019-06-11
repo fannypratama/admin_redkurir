@@ -3,15 +3,8 @@
  * 
  */
 class M_katalog extends CI_Model{
-	public function edit($id){
-		$data = array(
-			'nama_barang' => $this->input->post('nm_brg'), 
-			'harga_barang' => $this->input->post('hrg_brg'), 
-			'Kategori' => $this->input->post('ktgr_brg'),
-			'stok_barang' => $this->input->post('stok_brg'),
-			// 'gambar_barang' => $this->input->post('gbr_brg')
-		);
 
+	public function update($data=array(),$id){
 		$this->db->where('id_barang', $id);
 		$this->db->update('tb_barang', $data);
 	}
@@ -40,6 +33,7 @@ public function validation($mode){
 			$this->form_validation->set_rules('hrg_brg', 'hrg_brg', 'required');
 			$this->form_validation->set_rules('ktgr_brg', 'ktgr_brg', 'required');
 			$this->form_validation->set_rules('stok_brg', 'stok_brg', 'required');
+			$this->form_validation->set_rules('stok_brg', 'gmb_barang');
 			if($this->form_validation->run())
 				return TRUE;
 			else

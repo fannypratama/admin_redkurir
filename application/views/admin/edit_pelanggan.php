@@ -122,7 +122,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
-                                                    <form method="post" action="<?= base_url('welcome/edit_pelanggan/'.$pelanggan->kode_pos)?>">
+                                                    <form method="post" action="<?= base_url('welcome/edit_pelanggan2/'.$pelanggan->id_pelanggan)?>">
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">

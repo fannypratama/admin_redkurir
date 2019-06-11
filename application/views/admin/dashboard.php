@@ -19,7 +19,7 @@
                         <li class="nav-item">
                             <a href="<?= base_url('welcome/dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
                             </li>
-                        <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
+                        <li class="nav-item"><a href="<?= base_url('welcome/pelanggan')?>" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
                         </li>
                         <li class="nav-item"><a href="<?= base_url('welcome/katalog')?>"<i class="menu-icon fa fa-picture-o"></i> <span class="mini-dn">Katalog</span></a>
                         </li>

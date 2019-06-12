@@ -28,49 +28,12 @@ class Welcome extends CI_Controller {
 			redirect(base_url("Login"));
 		}
 		$this->load->model('M_katalog');
-
-		$this->load->model('M_Pelanggan');
-
 		$this->load->model('M_ongkir');
-
-
-
 		$this->load->model('M_Pelanggan');
-
 		function convRupiah($angka){
 			$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
 			return $hasil_rupiah;
 		}
-	}
-
-	public function edit_katalog2($id)
-	{
-		$id = $this->input->post('id_barang');
-
-		$insert = $this->M_katalog->update(array(
-			'nama_barang' => $this->input->post('nm_brg'), 
-			'harga_barang' => $this->input->post('hrg_brg'), 
-			'Kategori' => $this->input->post('ktgr_brg'),
-			'stok_barang' => $this->input->post('stok_barang'),
-			'gambar_barang' => $this->input->post('gmb_barang')
-		), $id);
-		redirect('Welcome/katalog');
-	}
-
-	public function edit_pelanggan2($id)
-	{
-		$id = $this->input->post('id_pelanggan');
-		$insert = $this->M_Pelanggan->update(array(
-			'username' => $this->input->post('username'), 
-			'email' => $this->input->post('email'), 
-			'password' => $this->input->post('password'),
-			'nama_pelanngan' => $this->input->post('nama_pelanggan'),
-			'Wa' => $this->input->post('wa'),
-			'Alamat' => $this->input->post('alamat'),
-			'kecamatan' => $this->input->post('kecamatan'),
-			'kode_pos' => $this->input->post('kode_pos')
-		), $id);
-		redirect('Welcome/pelanggan');
 	}
 
 	public function edit_katalog($id){
@@ -84,8 +47,24 @@ class Welcome extends CI_Controller {
 		$data['katalog'] = $this->M_katalog->view_by($id);
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
-		$this->load->view('admin/edit_katalog', $data);
+		$this->load->view('admin/Katalog', $data);
 		$this->load->view('templates/footer');
+	}
+	public function edit_pelanggan2($id)
+	{
+		$id = $this->input->post('id_pelanngan');
+		
+		$insert = $this->M_Pelanggan->update(array(
+			'username' => $this->input->post('username'), 
+			'email' => $this->input->post('email'), 
+			'password' => $this->input->post('password'),
+			'nama_pelanngan' => $this->input->post('nama_pelanggan'),
+			'telp' => $this->input->post('telp'),
+			'Alamat' => $this->input->post('alamat'),
+			'kecamatan' => $this->input->post('kecamatan'),
+			'kode_pos' => $this->input->post('kode_pos')
+		), $id);
+		redirect('Welcome/pelanggan');
 	}
 
 	public function index()
@@ -126,8 +105,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/Katalog', $data);
 		$this->load->view('templates/footer');
 	}
-
-
 	public function hapus_pelanggan($id)
 	{
 		$this->M_Pelanggan->delete($id);
@@ -155,11 +132,9 @@ class Welcome extends CI_Controller {
 		$data['pelanggan'] = $this->M_Pelanggan->view();
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
-		$this->load->view('admin/Pelanggan', $data);
+		$this->load->view('admin/pelanggan', $data);
 		$this->load->view('templates/footer');
-	}
-
-
+		}
 
 public function ongkir(){
 		$data['ongkir'] = $this->M_ongkir->view();
@@ -203,7 +178,7 @@ public function ongkir(){
 	}
 
 	public function lihat_ongkir($id){
-		$data['ongkir'] = $this->M_artikel->view_by($id);
+	 	$data['ongkir'] = $this->M_artikel->view_by($id);
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
 		$this->load->view('admin/ongkir/cek_ongkir', $data);
@@ -244,37 +219,6 @@ public function ongkir(){
 		$this->M_ongkir->update_data($where,$data,'ongkir');
 		redirect('welcome/ongkir');
 	}
-public function hapus_pelanggan($id)
-	{
-		$this->M_Pelanggan->delete($id);
-		redirect('welcome/pelanggan');
-	}
-
-	public function edit_pelanggan($id)
-	{
-		if($this->input->post('submit')){
-			if($this->M_Pelanggan->validation("update")){
-				$this->M_Pelanggan->edit($id);
-				redirect('welcome/pelanggan');
-			}
-		}
-
-		$data['pelanggan'] = $this->M_Pelanggan->view_by($id);
-		$this->load->view('templates/header');
-		$this->load->view('templates/sidebar');
-		$this->load->view('admin/edit_pelanggan', $data);
-		$this->load->view('templates/footer');
-	}
-
-	public function pelanggan()
-	{
-		$data['pelanggan'] = $this->M_Pelanggan->view();
-		$this->load->view('templates/header');
-		$this->load->view('templates/sidebar');
-		$this->load->view('admin/Pelanggan', $data);
-		$this->load->view('templates/footer');
-	}
-
-
+	
 }
 	

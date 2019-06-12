@@ -58,8 +58,6 @@
 
                                                 <span class="admin-name">Red Kurir</span>
 
-                                                <span class="admin-name">Red kurir</span>
-
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
@@ -120,8 +118,8 @@
                                     </div>
                                 </div>
                                 <div class="sparkline13-graph">
-                                	<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah">Tambah Data</button> -->
-                                	<a class="btn btn-success" data-toggle="modal" data-target="#tambah">TAMBAH DATA</a>
+                                    <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah">Tambah Data</button> -->
+                                    <a class="btn btn-success" data-toggle="modal" data-target="#tambah">TAMBAH DATA</a>
                                     <div class="datatable-dashv1-list custom-datatable-overright">
                                         <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                             <thead>
@@ -138,30 +136,29 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            	<?php 
-                                            	 $no = 1;
-                                            	 	if(!empty($katalog)){
-													foreach ($katalog as $data) {
-                                            	?>
-                                            	<tr>
-                                            		<!-- <td></td> -->
-                                            		<td><?= $no++;?></td>
-                                            		<td><?= $data->nama_barang?></td>
-                                            		<td><?= $data->harga_barang?></td>
-                                            		<td><?= $data->Kategori?></td>
-                                            		<td><?= $data->stok_barang?></td>
-                                                    <td><?= $data->gambar_barang?></td>
-                                            		<td><img src = "<?php echo base_url();?>/gambarkatalog/<?= $data->gambar_barang;?>" width="100" ></td>
-                                            		<td>
-                                            			<a href="<?php echo base_url('welcome/hapus_katalog/'.$data->id_barang)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
-                                            			<a class="btn btn-success" href="<?php echo base_url('welcome/edit_katalog/'.$data->id_barang)?>">Edit</a>
-                                            		</td>
+                                                <?php 
+                                                 $no = 1;
+                                                    if(!empty($katalog)){
+                                                    foreach ($katalog as $data) {
+                                                ?>
+                                                <tr>
+                                                    <!-- <td></td> -->
+                                                    <td><?= $no++;?></td>
+                                                    <td><?= $data->nama_barang?></td>
+                                                    <td><?= $data->harga_barang?></td>
+                                                    <td><?= $data->Kategori?></td>
+                                                    <td><?= $data->stok_barang?></td>
+                                                    <td><img src = "<?php echo base_url();?>/gambarkatalog/<?= $data->gambar_barang;?>" width="100" ></td>
+                                                    <td>
+                                                        <a href="<?php echo base_url('welcome/hapus_katalog/'.$data->id_barang)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
+                                                        <a class="btn btn-success" href="<?php echo base_url('welcome/edit_katalog/'.$data->id_barang)?>">Edit</a>
+                                                    </td>
 
 
-                                            	</tr>
-                                            	<?php
+                                                </tr>
+                                                <?php
                                             }
-		                                    }
+                                            }
                                             ?>
                                             </tbody>
                                         </table>

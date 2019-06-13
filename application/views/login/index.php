@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
         ============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/admin/')?>img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/admin/')?>img/11.jpg">
     <!-- Google Fonts
         ============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
@@ -52,8 +52,7 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <!-- Header top area start-->
-    <div class="wrapper-pro">
+    <!-- Header top area start-->>
         <!-- Header top area start-->
         <div class="content-inner-all">
             <!-- Breadcome End-->
@@ -70,7 +69,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="logo">
-                                                <a href="#"><img src="img/logo/logo.png" alt="" />
+                                                <a href="#"><img src="assets/admin/img/logo/4.jpg" alt="" />
                                                 </a>
                                             </div>
                                         </div>
@@ -78,7 +77,9 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Login Form</h1>
+                                                <h2>Login Form</h2>
+                                                <div class="col-lg-12">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +92,7 @@
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
                                                 <input type="text" name="username" />
-                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                                <i class="adminpro-icon adminpro-user-rounded header-riht-inf login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -109,7 +110,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="forgot-password">
-                                                        <a href="#">Forgot password?</a>
+                                                        <a href="#">Lupa kata sandi?</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -117,7 +118,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="login-keep-me">
                                                         <label class="checkbox">
-                                                            <input type="checkbox" name="remember" checked><i></i>Keep me logged in
+                                                            <input type="checkbox" name="remember" checked><i></i>buat saya tetap masuk
                                                         </label>
                                                     </div>
                                                 </div>
@@ -130,8 +131,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-button-pro">
-                                                <button type="submit" class="btn btn-sm btn-danger login-button-rg">Cancel</button>
-                                                <input type="submit" value="Login" class="btn btn-sm btn-danger login-button-rg">
+                                                <button type="submit" class="btn btn-sm btn-danger login-button-rg">batal</button>
+                                                <input type="submit" value="Masuk" class="btn btn-sm btn-danger login-button-rg">
                                                 <!-- <button type="submit" class="btn btn-sm btn-danger login-button-rg">Log in</button> -->
                                             </div>
                                         </div>
@@ -152,7 +153,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-copy-right">
-                        <p>Copyright &#169; 2018 Colorlib All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                        <p>RED Kurir POLITEKNIK NEGERI JEMBER</p>
                     </div>
                 </div>
             </div>

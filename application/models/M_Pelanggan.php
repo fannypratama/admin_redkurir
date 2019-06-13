@@ -7,24 +7,19 @@ class M_Pelanggan extends CI_Model{
 
 	public function update($data=array(),$id){
 
-		$this->db->where('id_pelanggan', $id);
+		$this->db->where('id_pelanngan', $id);
 		$this->db->update('pelanggan', $data);
 	}
 
 	public function view_by($id){
 
-		$this->db->where('kode_pos', $id);
-
-		$this->db->where('id_pelanggan', $id);
-
+		$this->db->where('id_pelanngan', $id);
 		return $this->db->get('pelanggan')->row();
 	}
 
 	public function delete($id){
 
-		$this->db->where('kode_pos', $id);
-
-		$this->db->where('id_pelanggan', $id);
+		$this->db->where('id_pelanngan', $id);
 
 		$this->db->delete('pelanggan');
 	}
@@ -53,13 +48,25 @@ public function validation($mode){
 	}
 	public function save(){
 		$data = array(
-			'nama_barang' => $this->input->post('nm_brg'), 
-			'harga_barang' => $this->input->post('hrg_brg'), 
-			'Kategori' => $this->input->post('ktgr_brg'),
-			'stok_barang' => $this->input->post('stok_brg')
+			'username' => $this->input->post('username'), 
+			'email' => $this->input->post('email'), 
+			'password' => $this->input->post('password'),
+			'nama_pelanngan' => $this->input->post('nama_pelanggan'),
+			'telp' => $this->input->post('telp'),
+			'Alamat' => $this->input->post('alamat'),
+			'kecamatan' => $this->input->post('kecamatan'),
+			'kode_pos' => $this->input->post('kode_pos')
 		);
+		redirect('Welcome/pelanggan');
 
 		$this->db->insert('pelanggan', $data);
+	}
+	function edit_data_pelanggan($where, $table){		
+		return $this->db->get_where($table, $where);
+	}
+	function update_pelanggan($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
 	}
 }
 ?>

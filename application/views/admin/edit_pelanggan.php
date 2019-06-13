@@ -67,44 +67,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Header top area end-->
-            <!-- Breadcome start-->
-            <div class="breadcome-area mg-b-30 small-dn">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="breadcome-list map-mg-t-40-gl shadow-reset">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcome-heading">
-                                            <form role="search" class="">
-                                                <input type="text" placeholder="Search..." class="form-control">
-                                                <a href=""><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <ul class="breadcome-menu">
-                                            <li><a href="#"></a> <span class="bread-slash"></span>
-                                            </li>
-                                            <li><span class="bread-blod"></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Breadcome End-->
-            <!-- Mobile Menu start -->
-           
-            <!-- Mobile Menu end -->
-            <!-- Breadcome start-->
-                        <!-- Basic Form Start -->
-        
-                    <div class="row">
                         <div class="col-lg-12">
                             <div class="sparkline12-list shadow-reset mg-t-30">
                                 <div class="sparkline12-hd">
@@ -122,14 +84,15 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
-                                                    <form method="post" action="<?= base_url('welcome/edit_pelanggan2/'.$pelanggan->id_pelanggan)?>">
+                                                    <?php foreach($pelanggan as $o) { ?>
+                                                    <form action="<?= base_url('welcome/update_pelanggan'); ?>" method="post">
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
                                                                     <label class="login2 pull-right pull-right-pro">Username</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="username" value="<?php echo set_value('username', $pelanggan->username)?>" />
+                                                                    <input type="text" class="form-control" name="username" value="<?php echo $o->username ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -139,7 +102,7 @@
                                                                     <label class="login2 pull-right pull-right-pro">Email</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="email" value="<?php echo set_value('email', $pelanggan->email)?>" />
+                                                                    <input type="text" class="form-control" name="email" value="<?php echo $o->email ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -149,61 +112,60 @@
                                                                     <label class="login2 pull-right pull-right-pro">Password</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="password"
-                                                                     value="<?php echo set_value('password', $pelanggan->password)?>"/>
+                                                                    <input type="number" class="form-control" name="password" value="<?php echo $o->password ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
-                                                                    <label class="login2 pull-right pull-right-pro">Nama Pelanggan</label>
+                                                               <label class="login2 pull-right pull-right-pro">Nama lengkap</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="nama_pelanggan" value="<?php echo set_value('nama_pelanggan', $pelanggan->nama_pelanngan)?>"/>
+                                                                    <input type="text" class="form-control" name="nama_pelanngan" value="<?php echo $o->nama_pelanngan ?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group-inner">
+                                                            <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
-                                                                    <label class="login2 pull-right pull-right-pro">Wa</label>
+                                                               <label class="login2 pull-right pull-right-pro">Telpon</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="wa" value="<?php echo set_value('wa', $pelanggan->Wa)?>"/>
+                                                                    <input type="number" class="form-control" name="telp" value="<?php echo $o->telp ?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group-inner">
+                                                            <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
-                                                                    <label class="login2 pull-right pull-right-pro">Alamat</label>
+                                                               <label class="login2 pull-right pull-right-pro">Alamat Lengkap</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="alamat" value="<?php echo set_value('alamat', $pelanggan->Alamat)?>"/>
+                                                                    <input type="text" class="form-control" name="Alamat" value="<?php echo $o->Alamat ?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group-inner">
+                                                            <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">
-                                                                    <label class="login2 pull-right pull-right-pro">Kecamatan</label>
+                                                               <label class="login2 pull-right pull-right-pro">Kecamatan</label>
                                                                 </div>
                                                                 <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="kecamatan" value="<?php echo set_value('kecamatan', $pelanggan->kecamatan)?>" />
-                                                                </div>
-                                                            </div>
-                                                        </div><div class="form-group-inner">
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <label class="login2 pull-right pull-right-pro">Kode Pos</label>
-                                                                </div>
-                                                                <div class="col-lg-9">
-                                                                    <input type="text" class="form-control" name="kode_pos" value="<?php echo set_value('kode pos', $pelanggan->kode_pos)?>"/>
+                                                                    <input type="text" class="form-control" name="kecamatan" value="<?php echo $o->kecamatan ?>" />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
+                                                            <div class="form-group-inner">
+                                                            <div class="row">
+                                                                <div class="col-lg-3">
+                                                               <label class="login2 pull-right pull-right-pro">Kode Pos</label>
+                                                                </div>
+                                                                <div class="col-lg-9">
+                                                                    <input type="number" class="form-control" name="kode_pos" value="<?php echo $o->kode_pos ?>" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group-inner">
                                                             <div class="login-btn-inner">
                                                                 <div class="row">
@@ -211,13 +173,14 @@
                                                                     <div class="col-lg-9">
                                                                         <div class="login-horizental cancel-wp pull-left">
                                                                             <button class="btn btn-white" type="submit">Cancel</button>
-                                                                            <input type="submit" class="btn btn-sm btn-primary login-submit-cs" name="submit" value="Simpan">
+                                                                            <button class="btn btn-sm btn-primary login-submit-cs" type="submit">Save Change</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </form>
+                                                <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -226,4 +189,5 @@
                             </div>
                         </div>
                     </div>
+                           
                 <!-- Basic Form End-->

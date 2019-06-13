@@ -115,10 +115,10 @@
                                                     <td><?php echo $data->kode_pos?></td>
                                                     <td><?php echo $data->Tarif?></td>
                                                     <td>
-                                                       <a href="<?php echo base_url('welcome/edit/'.$data->id_ongkir)?>">
+                                                        <a class="btn btn-success" href="<?php echo base_url('welcome/edit/'.$data->id_ongkir)?>">
                                                     <u>Edit</u>
                                                 </a>
-                                               <a href="<?php echo base_url('welcome/hapus_ongkir/'.$data->id_ongkir)?>" onclick="javascript: return confirm('Hapus data?')">Hapus</a>
+                                               <a  class="btn btn-danger" href="<?php echo base_url('welcome/hapus_ongkir/'.$data->id_ongkir)?>" onclick="javascript: return confirm('Hapus data?')">Hapus</a>
                                                     </td>
 
 
@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-
+            
         </div>
     </div>
     <div id="tambah" class="modal fade" role="dialog">

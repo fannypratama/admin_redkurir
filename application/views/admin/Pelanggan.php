@@ -126,8 +126,8 @@
                                                     <td><?= $data->kecamatan?></td>
                                                     <td><?= $data->kode_pos?></td>
                                                     <td>
-                                                    	<a href="<?= base_url('welcome/hapus_pelanggan/'.$data->kode_pos)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
-                                            			<a class="btn btn-success" href="<?php echo base_url('welcome/edit_pelanggan/'.$data->kode_pos)?>">Edit</a>
+                                                    	<a href="<?= base_url('welcome/hapus_pelanggan/'.$data->id_pelanngan)?>" onclick="javascript: return confirm('Hapus data?')"">Hapus</a>
+                                            			<a class="btn btn-success" href="<?php echo base_url('welcome/edit_data_pelanggan/'.$data->id_pelanngan)?>">Edit</a>
                                             		</td>
                                             	</tr>
                                             	<?php

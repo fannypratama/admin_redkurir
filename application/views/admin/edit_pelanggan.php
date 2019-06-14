@@ -93,6 +93,7 @@
                                                                 </div>
                                                                 <div class="col-lg-9">
                                                                     <input type="text" class="form-control" name="username" value="<?php echo $o->username ?>"/>
+                                                                    <input type="hidden" class="form-control" name="id_pelanngan" value="<?php echo $o->id_pelanngan ?>"/>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -191,6 +191,36 @@ public function ongkir(){
 		$this->load->view('templates/footer');
 	}
 
+	public function update_baru_pelanggan(){
+		$id= $this->input->post('id_pelanngan');
+		$username= $this->input->post('username');
+		$email= $this->input->post('email');
+		$password= $this->input->post('password');
+		$nama_pelanngan= $this->input->post('nama_pelanngan');
+		$telp= $this->input->post('telp');
+		$alamat= $this->input->post('Alamat');
+		$kecamatan= $this->input->post('kecamatan');
+		$kode_pos= $this->input->post('kode_pos');
+
+		$data = array(
+			'username' => $username,
+			'email' => $email,
+			'password' => $password,
+			'nama_pelanngan' => $nama_pelanngan,
+			'telp' => $telp,
+			'Alamat' => $alamat,
+			'kecamatan' => $kecamatan,
+			'kode_pos' => $kode_pos,
+			 );
+
+		$where = array(
+		'id_pelanngan' => $id
+		);
+
+		$this->M_Pelanggan->update_data($where,$data,'pelanggan');
+		redirect('welcome/pelanggan');
+	}
+
 	public function update(){
 		$id= $this->input->post('id_ongkir');
 		$Kecamatan= $this->input->post('Kecamatan');

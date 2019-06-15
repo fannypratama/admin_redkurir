@@ -85,7 +85,7 @@
                                             <div class="col-lg-12">
                                                 <div class="all-form-element-inner">
                                                     <?php foreach($pelanggan as $o) { ?>
-                                                    <form action="<?= base_url('welcome/update_pelanggan'); ?>" method="post">
+                                                    <form action="<?= base_url('welcome/update_baru_pelanggan'); ?>" method="post">
                                                         <div class="form-group-inner">
                                                             <div class="row">
                                                                 <div class="col-lg-3">

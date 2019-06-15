@@ -115,7 +115,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
 		$this->load->view('admin/edit_pelanggan', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer'); 
 	}
 		public function update_pelanggan(){
 		$username= $this->input->post('username');
@@ -190,6 +190,31 @@ public function ongkir(){
 		$this->load->view('admin/ongkir/edit_ongkir', $data);
 		$this->load->view('templates/footer');
 	}
+	public function update_baru_katalog(){
+		$id= $this->input->post('id_barang');
+		$nama_barang= $this->input->post('nama_barang');
+		$kode_barang= $this->input->post('kode_barang');
+		$Kategori= $this->input->post('Kategori');
+		$harga_barang= $this->input->post('harga_barang');
+		$stok_barang= $this->input->post('stok_barang');
+		$gambar_barang= $this->input->post('gambar_barang');
+
+		$data = array(
+			'nama_barang' => $nama_barang,
+			'kode_barang' => $kode_barang,
+			'Kategori' => $Kategori,
+			'harga_barang' => $harga_barang,
+			'stok_barang' => $stok_barang,
+			'gambar_barang' => $gambar_barang,
+			 );
+
+		$where = array(
+		'id_barang' => $id
+		);
+
+		$this->M_katalog->update_data($where,$data,'tb_barang');
+		redirect('welcome/katalog');
+	}
 
 	public function update_baru_pelanggan(){
 		$id= $this->input->post('id_pelanngan');
@@ -239,6 +264,8 @@ public function ongkir(){
 		$this->M_ongkir->update_data($where,$data,'ongkir');
 		redirect('welcome/ongkir');
 	}
+
+	
 	
 }
 	

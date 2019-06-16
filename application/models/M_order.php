@@ -6,9 +6,9 @@ class M_order extends CI_Model{
 	public function edit($id){
 		$data = array( 
 			'id_barang' => $this->input->post('id_brg'), 
-			'id_pelanggan' => $this->input->post('id_pelanggan'),
+			'id_pelanngan' => $this->input->post('id_pelanngan'),
 			'tanggal_pembelian' => $this->input->post('tanggal_pembelian'),
-			'status' => $this->input->post('status'),
+			'Status' => $this->input->post('Status'),
 			'total_pembelian' => $this->input->post('total_pembelian'),
 			// 'gambar_barang' => $this->input->post('gbr_brg')
 		);
@@ -38,7 +38,7 @@ public function validation($mode){
 		$this->load->library('form_validation');
 		if($mode == "save")
 			$this->form_validation->set_rules('id_barang', 'id_barang', 'required');
-			$this->form_validation->set_rules('id_pelanggan', 'id_pelanggan', 'required');
+			$this->form_validation->set_rules('id_pelanngan', 'id_pelanngan', 'required');
 			$this->form_validation->set_rules('tanggal_pembelian', 'tanggal_pembelian', 'required');
 			$this->form_validation->set_rules('status', 'status', 'required');
 			$this->form_validation->set_rules('total_pembelian', 'total_pembelian', 'required');
@@ -75,7 +75,7 @@ public function validation($mode){
 		return $query->result();
 	}
 
-	public function getPelanggan()
+	public function getPelanngan()
 	{
 		$this->db->select('*');
 		$this->db->from('pelanggan');

@@ -29,7 +29,7 @@ class order extends CI_Controller {
 	{
 		$data["order"] = $this->M_order->getOrder();
 		$data["barang"] = $this->M_order->getBarang();
-		$data["pelanggan"] = $this->M_order->getPelanggan();
+		$data["pelanngan"] = $this->M_order->getPelanngan();
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
 		$this->load->view('admin/Order', $data);

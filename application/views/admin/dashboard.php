@@ -84,7 +84,78 @@
                     </div>
                 </div>
             </div>
-          
+          <div class="income-order-visit-user-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="income-dashone-total income-monthly shadow-reset nt-mg-b-30">
+                                <div class="income-title">
+                                    <div class="main-income-head">
+                                        <div class="main-income-phara">
+                                            <p>Pelanggan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="income-dashone-pro">
+                                    <div class="income-rate-total">
+                                        <div class="price-adminpro-rate">
+                                            <h3><span class="counter">1</span><span> User</span></h3>
+                                        </div>
+                                        <div class="price-graph">
+                                            <span id="sparkline1"></span>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="income-dashone-total orders-monthly shadow-reset nt-mg-b-30">
+                                <div class="income-title">
+                                    <div class="main-income-head">
+                                        <div class="main-income-phara order-cl">
+                                            <p>katalog</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="income-dashone-pro">
+                                    <div class="income-rate-total">
+                                        <div class="price-adminpro-rate">
+                                            <h3><span class="counter">30</span><span> Item</span></h3>
+                                        </div>
+                                        <div class="price-graph">
+                                            <span id="sparkline6"></span>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="income-dashone-total visitor-monthly shadow-reset nt-mg-b-30">
+                                <div class="income-title">
+                                    <div class="main-income-head">
+                                        <div class="main-income-phara visitor-cl">
+                                            <p>Transaksi/Order</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="income-dashone-pro">
+                                    <div class="income-rate-total">
+                                        <div class="price-adminpro-rate">
+                                            <h3><span class="counter">2</span><span> Transaksi</span></h3>
+                                        </div>
+                                        <div class="price-graph">
+                                            <span id="sparkline2"></span>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                                        </div>
+            </div>
+            
             <!-- Breadcome End-->
             <!-- Mobile Menu start -->
             <!-- Breadcome End-->

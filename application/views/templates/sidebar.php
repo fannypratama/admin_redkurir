@@ -17,7 +17,7 @@
                         </li>
                         <li class="nav-item"><a href="<?= base_url('welcome/katalog')?>"<i class="menu-icon fa fa-picture-o"></i> <span class="mini-dn">Katalog</span></a>
                         </li>
-                        <li class="nav-item"><a href="<?= base_url('welcome/order')?>"><i class="menu-icon fa fa-shopping-cart"></i> <span class="mini-dn">Order</span></a>
+                        <li class="nav-item"><a href="<?= base_url('order/index')?>"><i class="menu-icon fa fa-shopping-cart"></i> <span class="mini-dn">Order</span></a>
                         </li>
                         <li class="nav-item"><a href="<?= base_url('welcome/ongkir')?>"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
                         </li>

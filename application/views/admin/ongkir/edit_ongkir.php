@@ -4,32 +4,6 @@
         <![endif]-->
 
     <!-- Header top area start-->
-    <div class="wrapper-pro">
-        <div class="left-sidebar-pro">
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                    <a href="#"><img src="img/message/1.jpg" alt="" />
-                    </a>
-                    <h3>Admin</h3>
-                    <strong></strong>
-                </div>
-                <div class="left-custom-menu-adp-wrap">
-                    <ul class="nav navbar-nav left-sidebar-menu-pro">
-                        <li class="nav-item">
-                            <a href="<?= base_url('dashboard')?>" ><i class="fa big-icon fa-home"></i> <span class="mini-dn">Dasboard</span></i></a>
-                            </li>
-                        <li class="nav-item"><a href="#" ><i class="fa fa-male sub-icon-mg"></i> <span class="mini-dn">Pelanggan</span></i></a>
-                        </li>
-                        <li class="nav-item"><a href="<?= base_url('welcome/katalog')?>"<i class="menu-icon fa fa-picture-o"></i> <span class="mini-dn">Katalog</span></a>
-                        </li>
-                        <li class="nav-item"><a href="#"><i class="menu-icon fa fa-shopping-cart"></i> <span class="mini-dn">Order</span></a>
-                        </li>
-                        <li class="nav-item"><a href="<?= base_url('welcome/ongkir')?>"><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Tarif Pengiriman</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
         <div class="content-inner-all">
             <div class="header-top-area">
                 <div class="fixed-header-top">
@@ -71,12 +45,9 @@
                                                 <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                             </a>
                                             <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                                <li><a href="#"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
-                                                </li>
+                                                <li><a href="<?= base_url('Login/logout')?>"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
                                             </ul>
                                         </li>
-
-                                                
                                                         </div>
                                                     </div>
             <!-- Header top area end-->
@@ -97,9 +68,9 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                         <ul class="breadcome-menu">
-                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                            <li><a href="#"></a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Dashboard</span>
+                                            <li><span class="bread-blod">Pengiriman</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -114,7 +85,7 @@
                             <div class="sparkline12-list shadow-reset mg-t-30">
                                 <div class="sparkline12-hd">
                                     <div class="main-sparkline12-hd">
-                                        <h1>Edit Data</h1>
+                                        <h1>Edit Data Pengiriman</h1>
                                         <div class="sparkline12-outline-icon">
                                             <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                             <span><i class="fa fa-wrench"></i></span>
@@ -201,7 +172,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-copy-right">
-                        <p>Copyright &#169; 2018 Colorlib All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                        <p>Copyright &#169;RED KURIR </a>.</p>
                     </div>
                 </div>
             </div>

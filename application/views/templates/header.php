@@ -54,4 +54,5 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="<?= site_url(); ?>assets/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+    
 </head>

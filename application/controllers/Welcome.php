@@ -89,6 +89,32 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/Katalog', $data);
 		$this->load->view('templates/footer');
 	}
+	public function update_baru_katalog(){
+		$id= $this->input->post('id_barang');
+		$nama_barang= $this->input->post('nama_barang');
+		$kode_barang= $this->input->post('kode_barang');
+		$Kategori= $this->input->post('Kategori');
+		$harga_barang= $this->input->post('harga_barang');
+		$stok_barang= $this->input->post('stok_barang');
+		$gambar_barang= $this->input->post('gambar_barang');
+
+		$data = array(
+			'nama_barang' => $nama_barang,
+			'kode_barang' => $kode_barang,
+			'Kategori' => $Kategori,
+			'harga_barang' => $harga_barang,
+			'stok_barang' => $stok_barang,
+			'gambar_barang' => $gambar_barang,
+			 );
+
+		$where = array(
+		'id_barang' => $id
+		);
+
+		$this->M_katalog->update_data($where,$data,'tb_barang');
+		redirect('welcome/katalog');
+	}
+
 	//katalog
 
 	//pelanggan
@@ -145,6 +171,36 @@ class Welcome extends CI_Controller {
 		$this->M_Pelanggan->update_pelanggan($where,$data,'pelanggan');
 		redirect('welcome/pelanggan');
 	}
+	public function update_baru_pelanggan(){
+		$id= $this->input->post('id_pelanngan');
+		$username= $this->input->post('username');
+		$email= $this->input->post('email');
+		$password= $this->input->post('password');
+		$nama_pelanngan= $this->input->post('nama_pelanngan');
+		$telp= $this->input->post('telp');
+		$alamat= $this->input->post('Alamat');
+		$kecamatan= $this->input->post('kecamatan');
+		$kode_pos= $this->input->post('kode_pos');
+
+		$data = array(
+			'username' => $username,
+			'email' => $email,
+			'password' => $password,
+			'nama_pelanngan' => $nama_pelanngan,
+			'telp' => $telp,
+			'Alamat' => $alamat,
+			'kecamatan' => $kecamatan,
+			'kode_pos' => $kode_pos,
+			 );
+
+		$where = array(
+		'id_pelanngan' => $id
+		);
+
+		$this->M_Pelanggan->update_data($where,$data,'pelanggan');
+		redirect('welcome/pelanggan');
+	}
+
 	//pelanggan
 
 	//ongkir	
@@ -190,62 +246,8 @@ public function ongkir(){
 		$this->load->view('admin/ongkir/edit_ongkir', $data);
 		$this->load->view('templates/footer');
 	}
-	public function update_baru_katalog(){
-		$id= $this->input->post('id_barang');
-		$nama_barang= $this->input->post('nama_barang');
-		$kode_barang= $this->input->post('kode_barang');
-		$Kategori= $this->input->post('Kategori');
-		$harga_barang= $this->input->post('harga_barang');
-		$stok_barang= $this->input->post('stok_barang');
-		$gambar_barang= $this->input->post('gambar_barang');
-
-		$data = array(
-			'nama_barang' => $nama_barang,
-			'kode_barang' => $kode_barang,
-			'Kategori' => $Kategori,
-			'harga_barang' => $harga_barang,
-			'stok_barang' => $stok_barang,
-			'gambar_barang' => $gambar_barang,
-			 );
-
-		$where = array(
-		'id_barang' => $id
-		);
-
-		$this->M_katalog->update_data($where,$data,'tb_barang');
-		redirect('welcome/katalog');
-	}
-
-	public function update_baru_pelanggan(){
-		$id= $this->input->post('id_pelanngan');
-		$username= $this->input->post('username');
-		$email= $this->input->post('email');
-		$password= $this->input->post('password');
-		$nama_pelanngan= $this->input->post('nama_pelanngan');
-		$telp= $this->input->post('telp');
-		$alamat= $this->input->post('Alamat');
-		$kecamatan= $this->input->post('kecamatan');
-		$kode_pos= $this->input->post('kode_pos');
-
-		$data = array(
-			'username' => $username,
-			'email' => $email,
-			'password' => $password,
-			'nama_pelanngan' => $nama_pelanngan,
-			'telp' => $telp,
-			'Alamat' => $alamat,
-			'kecamatan' => $kecamatan,
-			'kode_pos' => $kode_pos,
-			 );
-
-		$where = array(
-		'id_pelanngan' => $id
-		);
-
-		$this->M_Pelanggan->update_data($where,$data,'pelanggan');
-		redirect('welcome/pelanggan');
-	}
-
+	
+	
 	public function update(){
 		$id= $this->input->post('id_ongkir');
 		$Kecamatan= $this->input->post('Kecamatan');
@@ -264,8 +266,5 @@ public function ongkir(){
 		$this->M_ongkir->update_data($where,$data,'ongkir');
 		redirect('welcome/ongkir');
 	}
-
-	
-	
 }
 	
